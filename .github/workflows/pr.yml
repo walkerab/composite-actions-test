@@ -15,6 +15,6 @@ jobs:
         uses: actions/checkout@v2
 
       - id: foo
-        uses: ./.github/actions/comment-on-pr
+        uses: .github/actions/comment-on-pr
         with:
           folder-to-check: stage
