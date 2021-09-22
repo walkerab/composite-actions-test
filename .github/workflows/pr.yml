@@ -8,9 +8,13 @@ on:
 
 jobs:
   do_something:
-    - name: Check Out Code
-      uses: actions/checkout@v2
-    - id: foo
-      uses: ./.github/actions/comment-on-pr
-      with:
-        folder-to-check: stage
+    name: Do Stuff
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Code
+        uses: actions/checkout@v2
+
+      - id: foo
+        uses: ./.github/actions/comment-on-pr
+        with:
+          folder-to-check: stage
