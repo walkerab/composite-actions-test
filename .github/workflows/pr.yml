@@ -14,6 +14,6 @@ jobs:
       - name: Check Out Code
         uses: actions/checkout@v2
       - id: foo
-        uses: ./.githubcomment-on-pr
+        uses: ./.github/comment-on-pr
         with:
           folder-to-check: stage
