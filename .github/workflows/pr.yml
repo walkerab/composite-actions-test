@@ -16,4 +16,5 @@ jobs:
       - id: foo
         uses: ./.github/comment-on-pr
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           folder-to-check: stage
