@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Check Out Code
         uses: actions/checkout@v2
-
       - id: foo
-        uses: ./.github/actions/comment-on-pr
+        uses: ./.github/comment-on-pr
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           folder-to-check: stage

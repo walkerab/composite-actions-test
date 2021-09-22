@@ -4,13 +4,16 @@ inputs:
   folder-to-check:  # id of input
     description: 'Folder to trigger running on'
     required: true
+  github-token:
+    description: 'Secret github token'
+    required: true
 runs:
   using: "composite"
   steps:
     - name: Comment on PR
       uses: mshick/add-pr-comment@v1
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ inputs.github-token }}
         repo-token-user-login: 'github-actions[bot]'
         message: |
           ${{ inputs.folder-to-check }}
