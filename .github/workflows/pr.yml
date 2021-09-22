@@ -10,6 +10,6 @@ jobs:
   do_something:
     - uses: actions/checkout@v2
     - id: foo
-        uses: ./.github/actions/comment-on-pr
-        with:
-          folder-to-check: stage
+      uses: ./.github/actions/comment-on-pr
+      with:
+        folder-to-check: stage
